@@ -31,9 +31,7 @@ function App() {
     </Nav>
   </Navbar.Collapse>
 </Navbar>
-<Container>
   <Scroll />
-</Container>
 
 
     </>
