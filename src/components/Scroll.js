@@ -32,10 +32,11 @@ class Scroll extends React.Component {
           loader={<h4>Loading...</h4>}
         >
           <div>
+            <Container>
             {this.state.items.map((i, index) => (
               <Row key={index}>
                 
-                  <Col sm={6} >
+                  <Col md={6} >
                     <Card style={{  margin: "25px" }}>
                       <Card.Img variant="top" src="holder.js/100px180" />
                       <Card.Body>
@@ -51,6 +52,7 @@ class Scroll extends React.Component {
                 
               </Row>
               ))}
+            </Container>
           </div>
         </InfiniteScroll>
       </Container>
