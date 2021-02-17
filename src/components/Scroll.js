@@ -6,12 +6,6 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import InfiniteScroll from "react-infinite-scroll-component";
 
-const style = {
-  height: 30,
-  border: "1px solid green",
-  margin: 6,
-  padding: 8,
-};
 
 class Scroll extends React.Component {
   state = {
@@ -30,7 +24,7 @@ class Scroll extends React.Component {
 
   render() {
     return (
-      <div>
+      <Container>
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
@@ -38,12 +32,12 @@ class Scroll extends React.Component {
           loader={<h4>Loading...</h4>}
         >
           <div>
-            <Container fluid>
+            <Container>
             {this.state.items.map((i, index) => (
               <Row key={index}>
                 
                   <Col md={6} >
-                    <Card style={{ width: "100%", margin: "50px" }}>
+                    <Card style={{  margin: "50px" }}>
                       <Card.Img variant="top" src="holder.js/100px180" />
                       <Card.Body>
                         <Card.Title>Card Title</Card.Title>
@@ -61,7 +55,7 @@ class Scroll extends React.Component {
             </Container>
           </div>
         </InfiniteScroll>
-      </div>
+      </Container>
     );
   }
 }
