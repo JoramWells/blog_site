@@ -10,6 +10,7 @@ import Col from 'react-bootstrap/Col'
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Scroll from "./components/Scroll";
 import {GoogleLogin} from 'react-google-login'
+import Footer_s from "./components/Footer_s";
 
 const responseGoogle = (response) => {
   const data = response
@@ -84,6 +85,7 @@ function ModalCenter(props) {
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
+  
   );
 }
 
@@ -130,6 +132,7 @@ function App() {
 
 
       </div>
+      <Footer_s />
       <Scroll />
     </>
   );
