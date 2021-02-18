@@ -5,7 +5,8 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import InfiniteScroll from "react-infinite-scroll-component";
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faComment }from '@fortawesome/free-solid-svg-icons'
 
 class Scroll extends React.Component {
   state = {
@@ -24,7 +25,7 @@ class Scroll extends React.Component {
 
   render() {
     return (
-      <Container>
+      <Container fluid>
         <InfiniteScroll
           dataLength={this.state.items.length}
           next={this.fetchMoreData}
@@ -32,12 +33,12 @@ class Scroll extends React.Component {
           loader={<h4>Loading...</h4>}
         >
           <div>
-            <Container>
+            <Container fluid>
             {this.state.items.map((i, index) => (
               <Row key={index}>
                 
                   <Col md={6} >
-                    <Card style={{  margin: "25px", backgroundColor:"#001a33", color:"white" }}>
+                    <Card style={{  margin: "25px" }}>
                       <Card.Img variant="top" src="holder.js/100px180" />
                       <Card.Body>
                         <Card.Title>Card Title</Card.Title>
@@ -47,6 +48,9 @@ class Scroll extends React.Component {
                         </Card.Text>
                         <Button variant="warning">Go somewhere</Button>
                       </Card.Body>
+                      <Card.Footer>
+                        <FontAwesomeIcon icon={faComment} style={{color:"grey"}} />
+                      </Card.Footer>
                     </Card>
                   </Col>
                 
