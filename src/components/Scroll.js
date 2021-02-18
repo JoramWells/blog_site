@@ -37,7 +37,7 @@ class Scroll extends React.Component {
               <Row key={index}>
                 
                   <Col md={6} >
-                    <Card style={{  margin: "25px" }}>
+                    <Card style={{  margin: "25px", backgroundColor:"#001a33", color:"white" }}>
                       <Card.Img variant="top" src="holder.js/100px180" />
                       <Card.Body>
                         <Card.Title>Card Title</Card.Title>
